@@ -8,14 +8,17 @@ class Tool(ABC):
     def draw(self, data: str):
         pass
 
+# Behavioural Tool Marker
 class MarkerTool(Tool):
     def draw(self, data:str) -> str:
         return "Drawing " + data + " with marker."
 
+# Behavioural Tool Pencil
 class PencilTool(Tool):
     def draw(self, data:str) -> str:
         return "Drawing " + data + " with pencil."
 
+# Main class for client
 class WhiteBoard():
     """ Defines whiteboard client will interact with. """
 
