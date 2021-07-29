@@ -1,4 +1,6 @@
 # Decorator Design Pattern
+# Add new functionality to existing object without altering its structure. 
+# Acts as a wrapper to an existing class.
 
 class Component():
     def operation(self) -> str:
