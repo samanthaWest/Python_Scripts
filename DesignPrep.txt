@@ -15,3 +15,5 @@ Design Tips
 - design for interface not implementation
 - design for change
 - loosley coupled designs btw objects that interact
+- depend on abstractions not concrete classes
+- classes should be open to exension but closed for modification
