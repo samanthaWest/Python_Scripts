@@ -1,0 +1,17 @@
+When approaching a problem..
+
+Design Patterns
+
+Behavioural
+- Strategy
+- Observer
+
+
+Requirement Gathering
+- What we know and don't know
+- What are the most important features to implement/what is feasabile and what can be done later
+
+Design Tips
+- design for interface not implementation
+- design for change
+- loosley coupled designs btw objects that interact

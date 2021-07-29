@@ -7,7 +7,7 @@ from abc import ABC, abstractmethod
 # Observer Interface
 class Observer(ABC):
     @abstractmethod
-    def update(self, temp: int, humidity: int, pressure: int):
+    def update(self):
         pass
 
 # Display Element Interface
@@ -50,7 +50,16 @@ class WeatherData(Subject):
 
     def notifyObservers(self):
         for o in self._observers:
-            o.update(temp=self._tempature, humid=self._humidity, pressure=self._pressure)
+            o.update()
+    
+    def getTempature(self):
+        return self._tempature
+
+    def getHumidity(self):
+        return self._humidity
+
+    def getPressure(self):
+        return self._pressure
 
     def measurementsChanged(self):
         self.notifyObservers()
@@ -68,12 +77,12 @@ class CurrentConditionDisplay(Observer, DisplayElement):
         self._humidity = 0
         self._pressure = 0
         self._weatherData = weatherData
-        weatherData.registerObserver(self)
+        self._weatherData.registerObserver(self)
 
-    def update(self, temp: int, humid: int, pressure: int):
-        self._tempature = temp
-        self._humidity = humid
-        self._pressure = None
+    def update(self):
+        self._tempature = self._weatherData.getTempature()
+        self._humidity = self._weatherData.getHumidity()
+        self._pressure = self._weatherData.getPressure()
         self.display()
 
     def display(self):
