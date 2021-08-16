@@ -39,7 +39,6 @@ def insertNodeAtHead(llist, data):
     node = SinglyLinkedListNode(data)
     if llist is None:
         node.next = None
-        return node
     else:
         node.next = llist
     return node
