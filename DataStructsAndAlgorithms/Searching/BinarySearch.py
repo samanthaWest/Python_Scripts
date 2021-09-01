@@ -1,6 +1,36 @@
 # Takes advantage of collection of elements that is already sorted by ignoring half of the elements 
 # after just one comparison.
 
+# https://www.geeksforgeeks.org/binary-search/
+# Search a sorted array by repeatadly dividing the search interval in half. Begin with an interval 
+# covering the whole array of the value of the search key is less then the item in the middle then narrow search to the lower half
+# if its larger narrow search to the upper half. 
+
+# The idea of binary search is to reduce the time comeplxity of an already sorted array
+
+# iterative binary search
+def binarySearch_iter(arr, l, r ,x):
+
+    while l <= r:
+
+        mid = l + (r - l) // 2 # Get middle element , calculate with the low + high - low / 2 to avoid out of bounds calcs
+        if arr[mid] == x:
+            return mid # Found match
+        elif arr[mid] < x: # If mid is less then target then we only need to search on right side of the array
+            l = mid + 1 
+        else: # If mid is less then x then we only need to search on left side of the array
+            r = mid - 1
+
+    return - 1
+
+# Driver Code
+arr = [ 2, 3, 4, 10, 40 ]
+x = 10
+  
+# Function call
+result = binarySearch_iter(arr, 0, len(arr)-1, x)
+print(result)
+
 # Compare x with middle element
 # If x matches middle element we return the mid index
 # If x is greater then the mid element then x can only lie on the right side of the array. Then we apply the algorithm again for half
@@ -53,15 +83,17 @@ def binary_search_iterative(arr, x):
     return -1
 
 # Test array
-arr = [ 2, 3, 4, 10, 40 ]
-x = 10
+# arr = [ 2, 3, 4, 10, 40 ]
+# x = 10
  
-# Function call
-result = binary_search(arr, 0, len(arr)-1, x)
+# # Function call
+# result = binary_search(arr, 0, len(arr)-1, x)
 
-result = binary_search_iterative(arr, x)
+# result = binary_search_iterative(arr, x)
  
-if result != -1:
-    print("Element is present at index", str(result))
-else:
-    print("Element is not present in array")
+# if result != -1:
+#     print("Element is present at index", str(result))
+# else:
+#     print("Element is not present in array")
+
+

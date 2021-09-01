@@ -1,0 +1,15 @@
+Linked List
+- (delete at nth node) : Use slow and fast pointer to track the distance from the end of the list to the nth node
+
+Strings
+- (wordbreak) : Creating a list of true and false for the lenght of the string, extra out of bounds for the end = True and then
+we traverse through sections of the string backwords and look for a word match. When we find a word match we use lenght of word to see
+if it reaches another string where the value is true. If it's over reaching then the value will return false and it wont be a match. By going from the
+end we can see which words overlap.
+
+
+List 
+- ( two sum ) : Loop through numbers in incoming list, for every number create a new list for searching and pop the current number from it.
+Subtract current pop value from the target to get the value your looking for, if that value exists return the indexes.
+
+- ( three sum ) : 

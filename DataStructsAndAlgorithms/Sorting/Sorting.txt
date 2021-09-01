@@ -1,0 +1,24 @@
+https://www.freecodecamp.org/news/sorting-algorithms-explained/
+
+Selection Sort
+Bubble Sort
+Insertion Sort
+Merge Sort
+Quick Sort
+Heap Sort
+Counting Sort
+Radix Sort
+Bucket Sort
+
+https://www.geeksforgeeks.org/sorting-algorithms/?ref=ghm
+
+Classification of sorting
+- based on the number of swaps or inversion (number of times alg swaps elements) Selection Sort requires minimum number of swaps
+-  Based on the number of comparisons
+- Based on recursion or non recursive. Quick sort uses recursive technizes and others like selection sort or insert sort use non req technizes
+- Merge sort use both recursive and non recursive to sort input
+- Based on stability
+- Insert Sort, merge sort, bubble sort are stable
+- heap and quick sort are not stablespace requirements
+-insertion sort and quick sort are in place sort as we move elements and dont actually use seperate array while merge sort does.
+- merge sort is an example of out of place sort, as it requires extta memory and space

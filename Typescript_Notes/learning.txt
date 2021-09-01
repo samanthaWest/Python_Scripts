@@ -1,0 +1,32 @@
+
+TS
+
+- fast code, easy to compile, compile in peices, statically bound types
+- annotate type let a: number = 1
+- infer type let a: 1
+- JS needed dynamic binding, running program to know what type ands typescript already knows
+- project should have linter file for code
+- any should be avoided
+- uknown means you dont know it ahead of time and will need to refine it with instanceof
+- type literal rep single type and nothing else
+- if use const instead of var or let ts will know the value you want to infer
+- structeral typing , object has certain prop 
+- nominal typing , object is what the name is
+- avoid empty object types and using functional Object type
+- 4 ways  to declare obj in TS - obj literal, empty object, object type, Object
+
+- binary tree data structure, consists of nodes, node holds a value and points to 2 child nodes
+- node can be a leaf node (no children) or an inner node (at least one child)
+
+
+Array is a subtype of Object.
+Tuple is a subtype of Array.
+Everything is a subtype of any.
+never is a subtype of everything.
+If you have a class Bird that extends Animal, then Bird is a subtype of Animal.
+
+Array is a supertype of Tuple.
+Object is a supertype of Array
+Any is a supertype of everything.
+Never is a supertype of nothing.
+Animal is a supertype of Bird.

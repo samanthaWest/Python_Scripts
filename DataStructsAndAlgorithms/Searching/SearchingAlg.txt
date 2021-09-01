@@ -1,0 +1,15 @@
+# https://www.geeksforgeeks.org/search-algorithms-in-ai/
+
+Array Vs Linked List
+# https://www.youtube.com/watch?v=RbnYpsTmfDc&ab_channel=Simplilearn 
+
+There are 2 things to consider
+- the bounds of linked list vs and array for a particular operation and the real word implementation and usage pattern including cache-locality and allocations
+- accessing an indexed element in an array is very fast vs that operation on a linked list is long cause you need to know next and next. But if linked listis already
+traversed then it is the same time to take. 
+- Adding or removing eleemtns is a lot faster in an array
+- iterating seq over a list is more or less the same speed as an array
+- in some cases an array will take up more space as it extends
+- many insertions, iterating sequiantly = linked list
+- random access and ideally pre-defined size = array
+
